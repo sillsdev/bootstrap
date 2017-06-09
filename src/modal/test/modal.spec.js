@@ -1316,13 +1316,13 @@ describe('$uibModal', function() {
       it('should contain backdrop in classes on each modal opening', function() {
         var modal = open({ template: '<div>With backdrop</div>' });
         var backdropEl = $document.find('body > div.modal-backdrop');
-        expect(backdropEl).toHaveClass('in');
+        expect(backdropEl).toHaveClass('show');
 
         dismiss(modal);
 
         modal = open({ template: '<div>With backdrop</div>' });
         backdropEl = $document.find('body > div.modal-backdrop');
-        expect(backdropEl).toHaveClass('in');
+        expect(backdropEl).toHaveClass('show');
 
       });
 

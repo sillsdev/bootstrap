@@ -428,7 +428,7 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.multiMap', 'ui.bootstrap.sta
             'class': 'modal-backdrop',
             'ng-style': '{\'z-index\': 1040 + (index && 1 || 0) + index*10}',
             'uib-modal-animation-class': 'fade',
-            'modal-in-class': 'in'
+            'modal-in-class': 'show'
           });
           if (modal.backdropClass) {
             backdropDomEl.addClass(modal.backdropClass);
@@ -477,7 +477,7 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.multiMap', 'ui.bootstrap.sta
           'ng-style': '{\'z-index\': 1050 + $$topModalIndex*10, display: \'block\'}',
           'tabindex': -1,
           'uib-modal-animation-class': 'fade',
-          'modal-in-class': 'in'
+          'modal-in-class': 'show'
         }).append(content);
         if (modal.windowClass) {
           angularDomEl.addClass(modal.windowClass);
