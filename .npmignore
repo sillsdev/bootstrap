@@ -28,7 +28,7 @@ misc
 .jshintrc
 .travis.yml
 CONTRIBUTING.md
-Gruntfile.js
+#Gruntfile.js
 karma.conf.js
 ROADMAP.md
 
