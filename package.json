@@ -16,6 +16,7 @@
   },
   "files": [
     "index.js",
+    "Gruntfile.js",
     "dist/",
     "src/",
     "template/"
