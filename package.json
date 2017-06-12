@@ -16,7 +16,6 @@
   },
   "files": [
     "index.js",
-    "Gruntfile.js",
     "dist/",
     "src/",
     "template/"
@@ -25,7 +24,9 @@
   "scripts": {
     "build": "npm install && grunt html2js",
     "demo": "grunt after-test && static dist -a 0.0.0.0 -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'",
-    "test": "grunt"
+    "test": "grunt",
+    "preversion": "npm run test && npm run build",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
