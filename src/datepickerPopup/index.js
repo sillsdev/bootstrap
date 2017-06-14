@@ -1,3 +1,4 @@
+require('./../svg-icon.css');
 require('../datepicker/datepicker.css');
 require('../position/position.css');
 require('./popup.css');
