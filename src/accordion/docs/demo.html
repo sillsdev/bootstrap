@@ -15,8 +15,8 @@
   </script>
 
   <p>
-    <button type="button" class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
-    <button type="button" class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
+    <button type="button" class="btn btn-secondary btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
+    <button type="button" class="btn btn-secondary btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
   </p>
 
   <div class="checkbox">
@@ -34,7 +34,7 @@
     </div>
     <div uib-accordion-group class="panel-default" heading="Dynamic Body Content">
       <p>The body of the uib-accordion group grows to fit the contents</p>
-      <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+      <button type="button" class="btn btn-secondary btn-sm" ng-click="addItem()">Add Item</button>
       <div ng-repeat="item in items">{{item}}</div>
     </div>
     <div uib-accordion-group class="panel-default" heading="Custom template" template-url="group-template.html">

@@ -84,9 +84,18 @@
             <p>
                 <a class="btn btn-outline-inverse btn-lg" href="https://github.com/angular-ui/bootstrap"><i class="icon-github"></i>Code on Github</a>
                 <button type="button" class="btn btn-outline-inverse btn-lg" ng-click="showDownloadModal()">
-                    <i class="glyphicon glyphicon-download-alt"></i> Download <small>(<%= pkg.version%>)</small>
+
+                    <i class="fa-svg-icon">
+                        <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z"/></svg>
+                    </i>
+                    Download <small>(<%= pkg.version%>)</small>
                 </button>
-                <button type="button" class="btn btn-outline-inverse btn-lg" ng-click="showBuildModal()"><i class="glyphicon glyphicon-wrench"></i> Create a Build</button>
+                <button type="button" class="btn btn-outline-inverse btn-lg" ng-click="showBuildModal()">
+                    <i class="fa-svg-icon">
+                        <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M448 1472q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm644-420l-682 682q-37 37-90 37-52 0-91-37l-106-108q-38-36-38-90 0-53 38-91l681-681q39 98 114.5 173.5t173.5 114.5zm634-435q0 39-23 106-47 134-164.5 217.5t-258.5 83.5q-185 0-316.5-131.5t-131.5-316.5 131.5-316.5 316.5-131.5q58 0 121.5 16.5t107.5 46.5q16 11 16 28t-16 28l-293 169v224l193 107q5-3 79-48.5t135.5-81 70.5-35.5q15 0 23.5 10t8.5 25z"/></svg>
+                    </i>
+                    Create a Build
+                </button>
             </p>
         </div>
         <div class="bs-social container">
@@ -207,7 +216,12 @@
                         For the directives, we list the different attributes with their default values. In addition to this, some settings have a badge on it:
 
                         <ul>
-                            <li><i class="glyphicon glyphicon-eye-open"></i> - This setting has an angular $watch listener applied to it.</li>
+                            <li>
+                                <i class="fa-svg-icon">
+                                    <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 960q-152-236-381-353 61 104 61 225 0 185-131.5 316.5t-316.5 131.5-316.5-131.5-131.5-316.5q0-121 61-225-229 117-381 353 133 205 333.5 326.5t434.5 121.5 434.5-121.5 333.5-326.5zm-720-384q0-20-14-34t-34-14q-125 0-214.5 89.5t-89.5 214.5q0 20 14 34t34 14 34-14 14-34q0-86 61-147t147-61q20 0 34-14t14-34zm848 384q0 34-20 69-140 230-376.5 368.5t-499.5 138.5-499.5-139-376.5-368q-20-35-20-69t20-69q140-229 376.5-368t499.5-139 499.5 139 376.5 368q20 35 20 69z"/></svg>
+                                </i>
+                                - This setting has an angular $watch listener applied to it.
+                            </li>
                             <li><small class="badge">B</small> - This setting is a boolean. It doesn't need a parameter.</li>
                             <li><small class="badge">C</small> - This setting can be configured globally in a constant service*.</li>
                             <li><small class="badge">$</small> - This setting expects an angular expression instead of a literal string. If the expression support a boolean / integer, you can pass it directly.</li>
@@ -240,7 +254,12 @@
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('<%= ngversion%>', '<%= bsversion %>', '<%= pkg.version%>', '<%= module.name %>')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('<%= ngversion%>', '<%= bsversion %>', '<%= pkg.version%>', '<%= module.name %>')">
+                                        <i class="fa-svg-icon">
+                                            <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M888 1184l116-116-152-152-116 116v56h96v96h56zm440-720q-16-16-33 1l-350 350q-17 17-1 33t33-1l350-350q17-17 1-33zm80 594v190q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h832q63 0 117 25 15 7 18 23 3 17-9 29l-49 49q-14 14-32 8-23-6-45-6h-832q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-126q0-13 9-22l64-64q15-15 35-7t20 29zm-96-738l288 288-672 672h-288v-288zm444 132l-92 92-288-288 92-92q28-28 68-28t68 28l152 152q28 28 28 68t-28 68z"/></svg>
+                                        </i>
+                                        Edit in plunker
+                                    </button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -309,7 +328,12 @@
     </div>
     <div class="modal-footer">
         <a class="btn btn-default" ng-click="cancel()">Close</a>
-        <a class="btn btn-primary" ng-href="{{download('<%= pkg.version%>')}}" download><i class="glyphicon glyphicon-download-alt"></i> Download <%= pkg.version %></a>
+        <a class="btn btn-primary" ng-href="{{download('<%= pkg.version%>')}}" download>
+            <i class="fa-svg-icon">
+                <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z"/></svg>
+            </i>
+            Download <%= pkg.version %>
+        </a>
     </div>
 </script>
 <script type="text/ng-template" id="buildModal.html">
@@ -353,7 +377,10 @@
         <a class="btn btn-primary" ng-hide="isOldBrowser()"
             ng-disabled="isOldBrowser() !== false && !selectedModules.length"
             ng-click="selectedModules.length && build(selectedModules, '<%= pkg.version %>')">
-            <i class="glyphicon glyphicon-download-alt"></i> Download {{selectedModules.length}} Modules
+            <i class="fa-svg-icon">
+                <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z"/></svg>
+            </i>
+            Download {{selectedModules.length}} Modules
         </a>
     </div>
 </script>

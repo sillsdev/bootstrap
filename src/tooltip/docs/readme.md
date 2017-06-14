@@ -114,7 +114,7 @@ methods are available:
 For Safari 7+ support, if you want to use the **focus** `tooltip-trigger`, you need to use an anchor tag with a tab index. For example:
 
 ```
-<a tabindex="0" uib-tooltip="Test" tooltip-trigger="focus" class="btn btn-default">
+<a tabindex="0" uib-tooltip="Test" tooltip-trigger="focus" class="btn btn-secondary">
   Click Me
 </a>
 ```
