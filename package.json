@@ -1,7 +1,7 @@
 {
   "author": "https://github.com/angular-ui/bootstrap/graphs/contributors",
   "name": "angular-ui-bootstrap-4",
-  "version": "3.0.0-0",
+  "version": "3.0.0-1",
   "description": "Native AngularJS (Angular) directives for Bootstrap",
   "homepage": "http://angular-ui.github.io/bootstrap/",
   "keywords": [
