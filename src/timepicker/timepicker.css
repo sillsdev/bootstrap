@@ -1,3 +1,3 @@
 .uib-time input {
-  width: 50px;
+    width: 50px !important; /* Because when using in input-group for bootstrap 4, it will be overwritten.*/
 }
