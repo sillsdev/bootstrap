@@ -2,7 +2,7 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
 
 .constant('uibDropdownConfig', {
   appendToOpenClass: 'uib-dropdown-open',
-  openClass: 'open'
+  openClass: 'show'
 })
 
 .service('uibDropdownService', ['$document', '$rootScope', '$$multiMap', function($document, $rootScope, $$multiMap) {
