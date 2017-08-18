@@ -1,3 +1,5 @@
+const angular = require('angular');
+
 module.exports = angular
   .module('ui.bootstrap', [
     require('./src/collapse/index'),

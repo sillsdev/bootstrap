@@ -10,7 +10,8 @@ angular.module('ui.bootstrap.collapse', [])
           collapsedExpr = $parse(attrs.collapsed),
           horizontal = false,
           css = {},
-          cssTo = {};
+          cssTo = {},
+          openClass = 'show';
 
         init();
 
@@ -28,7 +29,7 @@ angular.module('ui.bootstrap.collapse', [])
             cssTo = {height: '0'};
           }
           if (!scope.$eval(attrs.uibCollapse)) {
-            element.addClass('in')
+            element.addClass(openClass)
               .addClass('collapse')
               .attr('aria-expanded', true)
               .attr('aria-hidden', false)
@@ -44,7 +45,7 @@ angular.module('ui.bootstrap.collapse', [])
         }
 
         function expand() {
-          if (element.hasClass('collapse') && element.hasClass('in')) {
+          if (element.hasClass('collapse') && element.hasClass(openClass)) {
             return;
           }
 
@@ -57,7 +58,7 @@ angular.module('ui.bootstrap.collapse', [])
 
               if ($animateCss) {
                 $animateCss(element, {
-                  addClass: 'in',
+                  addClass: openClass,
                   easing: 'ease',
                   css: {
                     overflow: 'hidden'
@@ -65,7 +66,7 @@ angular.module('ui.bootstrap.collapse', [])
                   to: getScrollFromElement(element[0])
                 }).start()['finally'](expandDone);
               } else {
-                $animate.addClass(element, 'in', {
+                $animate.addClass(element, openClass, {
                   css: {
                     overflow: 'hidden'
                   },
@@ -83,7 +84,7 @@ angular.module('ui.bootstrap.collapse', [])
         }
 
         function collapse() {
-          if (!element.hasClass('collapse') && !element.hasClass('in')) {
+          if (!element.hasClass('collapse') && !element.hasClass(openClass)) {
             return collapseDone();
           }
 
@@ -103,11 +104,11 @@ angular.module('ui.bootstrap.collapse', [])
 
               if ($animateCss) {
                 $animateCss(element, {
-                  removeClass: 'in',
+                  removeClass: openClass,
                   to: cssTo
                 }).start()['finally'](collapseDone);
               } else {
-                $animate.removeClass(element, 'in', {
+                $animate.removeClass(element, openClass, {
                   to: cssTo
                 }).then(collapseDone);
               }
