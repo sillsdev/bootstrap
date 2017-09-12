@@ -22,6 +22,7 @@
   ],
   "main": "index.js",
   "scripts": {
+    "prepare": "grunt html2js",
     "build": "npm install && grunt html2js",
     "demo": "grunt after-test && static dist -a 0.0.0.0 -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'",
     "test": "echo \"Error: no test because of DISCONNECTED error, should call grunt\" && exit 0",
