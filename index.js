@@ -1,4 +1,4 @@
-const angular = require('angular');
+var angular = require('angular');
 
 module.exports = angular
   .module('ui.bootstrap', [
