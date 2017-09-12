@@ -268,10 +268,10 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
       }
     }
 
+    var rightalign = self.dropdownMenu.hasClass('dropdown-menu-right');
     if (appendTo && self.dropdownMenu) {
       var pos = $position.positionElements($element, self.dropdownMenu, 'bottom-left', true),
         css,
-        rightalign,
         scrollbarPadding,
         scrollbarWidth = 0;
 
@@ -280,7 +280,6 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
         display: isOpen ? 'block' : 'none'
       };
 
-      rightalign = self.dropdownMenu.hasClass('dropdown-menu-right');
       if (!rightalign) {
         css.left = pos.left + 'px';
         css.right = 'auto';
@@ -312,6 +311,12 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
       }
 
       self.dropdownMenu.css(css);
+    } else if (rightalign) {
+      var css = {
+        right: '0',
+        left: 'auto'
+      };
+      self.dropdownMenu.css(css);
     }
 
     var openContainer = appendTo ? appendTo : $element;
@@ -326,7 +331,8 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
       } else {
         toggleClass = isOpen ? 'addClass' : 'removeClass';
       }
-      $animate[toggleClass](openContainer, dropdownOpenClass).then(function() {
+      openContainer[toggleClass](dropdownOpenClass);
+      $animate[toggleClass](self.dropdownMenu, dropdownOpenClass).then(function() {
         if (angular.isDefined(isOpen) && isOpen !== wasOpen) {
           toggleInvoker($scope, { open: !!isOpen });
         }
