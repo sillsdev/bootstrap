@@ -84,7 +84,7 @@ function($scope, $element, $attrs, $compile, $log, $parse, $window, $document, $
 
     // popup element used to display calendar
     popupEl = angular.element(
-      `<div uib-datepicker-popup-wrap data-ng-class="{'show': isOpen}"><div uib-datepicker></div></div>`
+      '<div uib-datepicker-popup-wrap data-ng-class="{\'show\': isOpen}"><div uib-datepicker></div></div>'
     );
 
     popupEl.attr({
